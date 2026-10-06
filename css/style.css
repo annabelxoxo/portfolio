@@ -1,0 +1,1231 @@
+/* ==========================================================================
+   STIJL
+   Kleuren en lettertypes staan bovenaan als variabelen: pas ze daar aan en
+   de hele site verandert mee.
+   ========================================================================== */
+
+:root {
+  --papier: #f2f0ff;
+  --inkt: #1c1240;
+  --blauw: #3a2cf0;
+  --oranje: #ff6a3d;
+  --geel: #ffd84a;
+  --roze: #ff9ad5;
+  --mint: #7fe0c0;
+
+  --lijn: rgba(28, 18, 64, 0.18);
+  --gedempt: rgba(28, 18, 64, 0.72);
+
+  --rand: clamp(1.25rem, 4vw, 3rem);
+  --max: 1200px;
+
+  --kop: "Bricolage Grotesque", "Arial Rounded MT Bold", "Helvetica Neue", Arial, sans-serif;
+  --tekst: "Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--papier);
+  color: var(--inkt);
+  font: 400 1.0625rem/1.6 var(--tekst);
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--kop);
+  margin: 0;
+}
+
+.wrap {
+  width: min(100% - 2 * var(--rand), var(--max));
+  margin-inline: auto;
+}
+
+:focus-visible {
+  outline: 3px solid var(--oranje);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.skip {
+  position: absolute;
+  left: var(--rand);
+  top: -5rem;
+  z-index: 100;
+  background: var(--inkt);
+  color: var(--papier);
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+}
+.skip:focus {
+  top: 1rem;
+}
+
+/* ---------- Kop en menu ---------- */
+
+.kop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1.25rem;
+}
+
+.logo {
+  font: 700 1.25rem/1 var(--kop);
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.logo img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  transition: transform 0.15s;
+}
+.logo:hover img {
+  transform: rotate(-8deg) scale(1.05);
+}
+.logo:hover {
+  color: var(--blauw);
+}
+.logo span,
+.menu a {
+  white-space: nowrap;
+}
+@media (max-width: 640px) {
+  .logo span {
+    display: none;
+  }
+}
+
+.menu {
+  display: flex;
+  gap: clamp(1rem, 3vw, 2rem);
+}
+
+.menu a {
+  text-decoration: none;
+  font-weight: 500;
+  padding-block: 0.25rem;
+}
+
+.menu a:hover,
+.menu a[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.3em;
+}
+
+.menu a[aria-current="page"] {
+  text-decoration-color: var(--blauw);
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: min(840px, calc(100svh - 72px));
+  padding-block: 4rem;
+  background: var(--geel);
+  overflow: hidden;
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.8fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 5rem);
+}
+
+.hero-copy {
+  min-width: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-overline,
+.werk-overline {
+  margin: 0 0 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.hero-overline span {
+  color: var(--oranje);
+  padding-inline: 0.35rem;
+}
+
+.hero-naam {
+  margin: 0 0 0.75rem;
+  color: var(--blauw);
+  font: 700 7.5rem/0.82 var(--kop);
+}
+
+.hero-portret {
+  width: 100%;
+  max-width: 420px;
+  justify-self: end;
+  margin: 0;
+}
+
+.hero-foto {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 2px solid var(--inkt);
+  border-radius: 48% 48% 8px 8px;
+  box-shadow: 14px 14px 0 var(--roze);
+  animation: portret-zweef 5.5s ease-in-out infinite;
+}
+
+@keyframes portret-zweef {
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+    box-shadow: 12px 16px 0 var(--mint);
+  }
+}
+
+.hero h1 {
+  max-width: 20ch;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 0.94;
+}
+
+.intro {
+  margin: 1.25rem 0 0;
+  max-width: 54ch;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.hero-portret figcaption {
+  margin-top: 1rem;
+  text-align: right;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: 1.5rem;
+  font: 700 1.2rem/1.2 var(--kop);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.3em;
+}
+
+.hero-cta span {
+  display: inline-block;
+  color: var(--blauw);
+  transition: transform 0.2s ease;
+}
+
+.hero-cta:hover span {
+  transform: translate(3px, 3px);
+}
+
+.loopband {
+  overflow: hidden;
+  background: var(--inkt);
+  color: var(--papier);
+  border-block: 2px solid var(--inkt);
+}
+
+.loopband-track {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: max-content;
+  padding-block: 0.85rem;
+  animation: band-loop 28s linear infinite;
+}
+
+.loopband-track span {
+  font: 700 1.1rem/1 var(--kop);
+}
+
+.loopband-track span:nth-child(even) {
+  color: var(--roze);
+}
+
+@keyframes band-loop {
+  to { transform: translateX(-50%); }
+}
+
+.werk-home {
+  padding-block: 5rem;
+}
+
+.werk-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.werk-overline {
+  color: var(--gedempt);
+}
+
+.werk-heading h2 {
+  font: 700 3.5rem/0.95 var(--kop);
+}
+
+.werk-heading .meer {
+  flex: 0 0 auto;
+  margin: 0 0 0.25rem;
+}
+
+#uitgelicht {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3.5rem 2rem;
+  padding: 0;
+  border: 0;
+}
+
+#uitgelicht > li {
+  min-width: 0;
+  border: 0;
+}
+
+#uitgelicht .rij {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "thumb" "titel" "info";
+  gap: 0.85rem;
+  padding: 0;
+}
+
+#uitgelicht .rij-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 4px;
+  transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+#uitgelicht .rij:hover .rij-thumb,
+#uitgelicht .rij:focus-visible .rij-thumb {
+  transform: translateY(-5px) rotate(-1deg);
+}
+
+#uitgelicht .rij-titel {
+  font-size: 2.8rem;
+  line-height: 0.95;
+}
+
+#uitgelicht .rij-info {
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+  text-align: left;
+}
+
+@media (max-width: 899px) {
+  .hero {
+    min-height: 0;
+    padding-block: 3.5rem;
+  }
+  .hero-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+  .hero-naam {
+    font-size: 6rem;
+  }
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+  .hero-portret {
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero {
+    padding-block: 3rem;
+  }
+  .hero-layout {
+    gap: 2rem;
+  }
+  .hero-naam {
+    font-size: 4.5rem;
+  }
+  .hero h1 {
+    font-size: 2.75rem;
+  }
+  .intro {
+    font-size: 1.05rem;
+  }
+  .hero-portret {
+    max-width: 280px;
+    justify-self: center;
+  }
+  .werk-home {
+    padding-block: 3.5rem;
+  }
+  .werk-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .werk-heading h2 {
+    font-size: 2.5rem;
+  }
+  #uitgelicht {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+  #uitgelicht > li:first-child {
+    grid-column: auto;
+  }
+  #uitgelicht .rij-titel {
+    font-size: 2.4rem;
+  }
+}
+
+/* ---------- Stickers: de rollen-badges onder de intro ---------- */
+
+.rollen {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem 1rem;
+  margin: 2.25rem 0 0;
+  padding: 0;
+}
+
+.sticker {
+  position: relative;
+  font: 600 0.95rem/1.2 var(--tekst);
+  background: var(--papier);
+  border: 2px solid var(--inkt);
+  border-radius: 999px;
+  padding: 0.55rem 1.1rem;
+}
+
+/* elke sticker krijgt een eigen kleur, een eigen scheve hoek en een "plakbandje" */
+.sticker::before {
+  content: "";
+  position: absolute;
+  top: -0.6rem;
+  left: 50%;
+  width: 1.6rem;
+  height: 0.85rem;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(28, 18, 64, 0.25);
+  transform: translateX(-50%) rotate(-4deg);
+}
+
+.sticker.s0 { background: var(--geel); transform: rotate(-3deg); }
+.sticker.s1 { background: var(--mint); transform: rotate(2deg); }
+.sticker.s2 { background: var(--roze); transform: rotate(-2deg); }
+.sticker.s3 { background: #d8d2ff; transform: rotate(3deg); }
+
+.sticker:hover {
+  transform: rotate(0deg) scale(1.06);
+}
+
+/* De woorden van de kop schuiven één keer omhoog. */
+.w {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  padding: 0 0.04em 0.12em;
+  margin: 0 -0.04em -0.12em;
+}
+.w > span {
+  display: inline-block;
+  animation: op 0.75s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  animation-delay: calc(var(--i) * 60ms);
+}
+@keyframes op {
+  from {
+    transform: translateY(105%);
+  }
+}
+
+/* ---------- Projectenlijst (het hart van de site) ---------- */
+
+.lijst {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 2px solid var(--inkt);
+}
+
+.lijst > li {
+  border-bottom: 1px solid var(--lijn);
+  animation: rij-binnen 0.65s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.lijst > li:nth-child(2) { animation-delay: 80ms; }
+.lijst > li:nth-child(3) { animation-delay: 160ms; }
+.lijst > li:nth-child(4) { animation-delay: 240ms; }
+.lijst > li:nth-child(5) { animation-delay: 320ms; }
+.lijst > li:nth-child(6) { animation-delay: 400ms; }
+@keyframes rij-binnen {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
+.rij {
+  display: grid;
+  grid-template-columns: 1fr auto 112px;
+  grid-template-areas: "titel info thumb";
+  align-items: center;
+  gap: 0.25rem 1.5rem;
+  padding-block: clamp(0.9rem, 2vw, 1.4rem);
+  text-decoration: none;
+}
+
+.rij-titel {
+  grid-area: titel;
+  font: 700 clamp(2rem, 6vw, 4.75rem) / 1 var(--kop);
+  letter-spacing: -0.03em;
+}
+
+.rij-info {
+  grid-area: info;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  color: var(--gedempt);
+}
+
+.rij-thumb {
+  grid-area: thumb;
+  aspect-ratio: 4 / 3;
+  border: 2px solid var(--inkt);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Bij hover of toetsenbord-focus: titel wordt blauw en de cover draait even */
+.rij-titel {
+  display: inline-block;
+  transition: transform 0.15s, color 0.15s;
+}
+.rij:hover .rij-titel,
+.rij:focus-visible .rij-titel {
+  color: var(--blauw);
+  transform: rotate(-1.5deg);
+}
+.rij-thumb {
+  transition: transform 0.2s;
+}
+.rij:hover .rij-thumb,
+.rij:focus-visible .rij-thumb {
+  transform: rotate(-5deg) scale(1.12);
+}
+
+.meer {
+  display: inline-block;
+  margin-top: 1.75rem;
+  font: 600 1.25rem/1.2 var(--kop);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.3em;
+}
+.meer:hover {
+  color: var(--blauw);
+}
+
+.cover svg,
+.cover img,
+.rij-thumb svg,
+.rij-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Telefoon: cover rechts naast titel en info */
+@media (max-width: 720px) {
+  .rij {
+    grid-template-columns: 1fr 84px;
+    grid-template-areas:
+      "titel thumb"
+      "info thumb";
+  }
+  .rij-info {
+    text-align: left;
+  }
+  .rij-thumb {
+    aspect-ratio: 1;
+  }
+}
+
+/* ---------- Confetti en toast (Konami-code) ---------- */
+
+.confetti-laag {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 200;
+}
+.confetti-laag i {
+  position: absolute;
+  top: -12px;
+  left: var(--x);
+  width: 9px;
+  height: 13px;
+  background: var(--k);
+  border-radius: 2px;
+  opacity: 0.95;
+  animation: confetti-val var(--d) var(--v) cubic-bezier(0.4, 0, 0.6, 1) forwards;
+}
+@keyframes confetti-val {
+  to {
+    transform: translateY(105vh) rotate(var(--r));
+    opacity: 0.5;
+  }
+}
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 2rem;
+  z-index: 210;
+  background: var(--inkt);
+  color: var(--papier);
+  padding: 0.85rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transform: translate(-50%, 16px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+.toast.zichtbaar {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+/* ---------- Snake (verstopte verrassing) ---------- */
+
+.snake-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(28, 18, 64, 0.6);
+}
+.snake-overlay[hidden] {
+  display: none;
+}
+.snake-card {
+  position: relative;
+  width: min(92vw, 380px);
+  text-align: center;
+  background: var(--papier);
+  border: 3px solid var(--inkt);
+  border-radius: 24px;
+  box-shadow: 8px 8px 0 var(--inkt);
+  padding: 1.75rem;
+  transform: rotate(-1deg);
+}
+.snake-close {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  width: 2.15rem;
+  height: 2.15rem;
+  border-radius: 999px;
+  border: 2px solid var(--inkt);
+  background: var(--roze);
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.snake-kicker {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--blauw);
+}
+.snake-titel {
+  margin: 0.2rem 0 0.85rem;
+  font-size: 1.6rem;
+  letter-spacing: -0.02em;
+}
+.snake-score-row {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 0.85rem;
+  font-size: 0.95rem;
+}
+#snakeCanvas {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  border: 2px solid var(--inkt);
+  border-radius: 12px;
+  touch-action: none;
+}
+.snake-hint {
+  margin: 0.85rem 0 0.5rem;
+  font-size: 0.85rem;
+  color: var(--gedempt);
+}
+.snake-dpad {
+  display: grid;
+  grid-template-columns: repeat(3, 2.5rem);
+  grid-template-rows: repeat(2, 2.5rem);
+  gap: 0.4rem;
+  justify-content: center;
+  margin-top: 0.75rem;
+}
+.snake-dpad button {
+  border: 2px solid var(--inkt);
+  border-radius: 10px;
+  background: var(--geel);
+  font-size: 1.05rem;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 var(--inkt);
+}
+.snake-dpad button[data-dir="up"] { grid-column: 2; grid-row: 1; }
+.snake-dpad button[data-dir="left"] { grid-column: 1; grid-row: 2; }
+.snake-dpad button[data-dir="down"] { grid-column: 2; grid-row: 2; }
+.snake-dpad button[data-dir="right"] { grid-column: 3; grid-row: 2; }
+
+@media (hover: hover) and (pointer: fine) {
+  .snake-dpad {
+    display: none; /* op desktop speel je toch met het toetsenbord */
+  }
+}
+
+/* ---------- Duo-blok (label links, tekst rechts) ---------- */
+
+.duo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 1rem 2rem;
+  padding-block: clamp(3rem, 8vw, 5.5rem);
+}
+.duo h2 {
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+}
+.duo p {
+  margin: 0;
+  max-width: 62ch;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+/* ---------- Projectenpagina ---------- */
+
+.paginakop {
+  padding-top: clamp(2rem, 6vw, 4rem);
+  padding-bottom: 2rem;
+}
+.paginakop h1 {
+  font-size: clamp(2.6rem, 8vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  font-weight: 700;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.chip {
+  font: 600 1rem/1 var(--tekst);
+  color: inherit;
+  background: var(--papier);
+  border: 2px solid var(--inkt);
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 var(--inkt);
+  transition: transform 0.12s, box-shadow 0.12s, background 0.12s;
+}
+.chip:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--inkt);
+}
+.chip[aria-pressed="true"] {
+  background: var(--blauw);
+  color: #fff;
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--inkt);
+}
+
+.teller {
+  margin: 0 0 1.5rem;
+  color: var(--gedempt);
+  font-size: 0.95rem;
+}
+
+.klein {
+  padding-block: clamp(3rem, 8vw, 5rem);
+}
+.klein h2 {
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+.klein-lijst {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 2px solid var(--inkt);
+}
+.klein-rij {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr);
+  gap: 0.25rem 2rem;
+  padding-block: 1rem;
+  border-bottom: 1px solid var(--lijn);
+}
+.klein-rij strong {
+  font: 700 1.125rem/1.3 var(--kop);
+}
+.klein-rij span:last-child {
+  color: var(--gedempt);
+  text-align: right;
+}
+
+/* ---------- Projectpagina ---------- */
+
+.project {
+  padding-top: clamp(1.5rem, 4vw, 2.5rem);
+  padding-bottom: clamp(3rem, 8vw, 5rem);
+}
+.terug {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+.project h1 {
+  font-size: clamp(2.6rem, 8vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  font-weight: 700;
+  max-width: 16ch;
+}
+.lead {
+  margin: 1.5rem 0 0;
+  max-width: 50ch;
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  line-height: 1.45;
+}
+
+.knoppen {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+.knop {
+  display: inline-block;
+  padding: 0.8rem 1.35rem;
+  border-radius: 999px;
+  background: var(--geel);
+  color: var(--inkt);
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid var(--inkt);
+  box-shadow: 4px 4px 0 var(--inkt);
+  transition: transform 0.12s, box-shadow 0.12s;
+}
+.knop:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--inkt);
+}
+.knop:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--inkt);
+}
+
+.meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 1.25rem 2rem;
+  margin: 2.5rem 0;
+  padding-top: 1.25rem;
+  border-top: 2px solid var(--inkt);
+}
+.meta dt {
+  font-size: 0.9rem;
+  color: var(--gedempt);
+}
+.meta dd {
+  margin: 0.15rem 0 0;
+  font-weight: 500;
+}
+
+.cover {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid var(--inkt);
+  transform: rotate(-0.6deg);
+}
+.cover::after {
+  content: "";
+  position: absolute;
+  top: -0.7rem;
+  left: 2rem;
+  width: 3.5rem;
+  height: 1.5rem;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(28, 18, 64, 0.3);
+  transform: rotate(-5deg);
+  z-index: 2;
+}
+
+.sectie {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 1rem 2rem;
+  padding-block: clamp(2rem, 5vw, 3rem);
+  border-top: 1px solid var(--lijn);
+}
+.sectie:first-of-type {
+  margin-top: clamp(2rem, 5vw, 3.5rem);
+  border-top: 2px solid var(--inkt);
+}
+.sectie h2 {
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+}
+.tekst {
+  max-width: 62ch;
+}
+.tekst p {
+  margin: 0 0 1em;
+}
+.tekst p:last-child {
+  margin-bottom: 0;
+}
+.tekst ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+.tekst li {
+  margin-bottom: 0.5em;
+}
+.stap + .stap {
+  margin-top: 1.75rem;
+}
+.stap h3 {
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.35rem;
+}
+.stap p {
+  margin: 0;
+}
+
+.media {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+}
+.media img {
+  width: 100%;
+  border-radius: 16px;
+  border: 2px solid var(--inkt);
+}
+.media figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--gedempt);
+}
+.video {
+  grid-column: 1 / -1;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid var(--inkt);
+}
+.video iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.volgende {
+  margin-top: clamp(3rem, 8vw, 5rem);
+}
+.volgende > p {
+  margin: 0 0 0.75rem;
+  font-weight: 500;
+}
+
+/* ---------- Over mij en contact ---------- */
+
+.over {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  padding-bottom: clamp(3rem, 8vw, 5rem);
+}
+.over .tekst p {
+  font-size: 1.2rem;
+  line-height: 1.55;
+}
+.over-foto {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 16px;
+  border: 2px solid var(--inkt);
+  margin-bottom: 2rem;
+}
+.groep + .groep {
+  margin-top: 2rem;
+}
+.groep h2 {
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.tags li {
+  border: 2px solid var(--inkt);
+  background: var(--papier);
+  border-radius: 999px;
+  padding: 0.3rem 0.85rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  box-shadow: 2px 2px 0 var(--inkt);
+}
+.tags li:nth-child(3n+1) { background: var(--geel); }
+.tags li:nth-child(3n+2) { background: var(--mint); }
+.tags li:nth-child(3n+3) { background: var(--roze); }
+
+.contact-mail {
+  position: relative;
+  display: inline-block;
+  margin-top: 1.75rem;
+  padding: 0.9rem 1.75rem;
+  background: var(--geel);
+  border: 2px solid var(--inkt);
+  border-radius: 20px;
+  box-shadow: 5px 5px 0 var(--inkt);
+  font: 700 clamp(1.5rem, 4.5vw, 2.75rem) / 1.1 var(--kop);
+  letter-spacing: -0.03em;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transform: rotate(-1deg);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.contact-mail:hover {
+  transform: rotate(0deg) translate(-2px, -2px);
+  box-shadow: 7px 7px 0 var(--inkt);
+}
+.contact-mail:active {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0 var(--inkt);
+}
+.contact-links {
+  list-style: none;
+  padding: 0;
+  margin: 2.5rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 2rem;
+  font-size: 1.15rem;
+}
+.contact-pagina {
+  padding-bottom: clamp(3rem, 8vw, 6rem);
+}
+
+/* ---------- Voet ---------- */
+
+.voet {
+  position: relative;
+  background: var(--inkt);
+  color: var(--papier);
+  padding-block: clamp(3rem, 8vw, 5rem) 2rem;
+  margin-top: 2rem;
+}
+.voet::before {
+  content: "";
+  position: absolute;
+  top: -1.2rem;
+  left: 0;
+  width: 100%;
+  height: 1.3rem;
+  background-color: var(--inkt);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 20' preserveAspectRatio='none'%3E%3Cpath d='M0 20 C 10 0, 20 0, 30 10 S 50 20, 60 10 S 80 0, 90 10 S 110 20, 120 10 L120 20 Z'/%3E%3C/svg%3E") repeat-x;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 20' preserveAspectRatio='none'%3E%3Cpath d='M0 20 C 10 0, 20 0, 30 10 S 50 20, 60 10 S 80 0, 90 10 S 110 20, 120 10 L120 20 Z'/%3E%3C/svg%3E") repeat-x;
+  -webkit-mask-size: 120px 100%;
+  mask-size: 120px 100%;
+}
+.voet h2 {
+  font-size: clamp(1.8rem, 4.5vw, 3.25rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  max-width: 18ch;
+}
+.voet-mail {
+  display: inline-block;
+  margin-top: 1.25rem;
+  font: 600 clamp(1.15rem, 2.4vw, 1.6rem) / 1.2 var(--kop);
+  color: var(--geel);
+  overflow-wrap: anywhere;
+}
+.voet-onder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  margin-top: clamp(2.5rem, 6vw, 4rem);
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(242, 240, 255, 0.3);
+  font-size: 0.95rem;
+}
+.voet-onder ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+.voet :focus-visible {
+  outline-color: var(--geel);
+}
+
+/* ---------- Over mij: de persoon achter alles ---------- */
+
+.persoon {
+  padding-block: clamp(2.5rem, 6vw, 4rem) clamp(3rem, 8vw, 5rem);
+  border-top: 2px solid var(--inkt);
+}
+.persoon > h2 {
+  font: 700 clamp(2.25rem, 6vw, 3.5rem)/0.95 var(--kop);
+  letter-spacing: -0.03em;
+}
+.persoon-intro {
+  max-width: 62ch;
+  margin: 1.25rem 0 0;
+  font-size: 1.2rem;
+  line-height: 1.55;
+}
+.persoon-blok {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  gap: clamp(1.5rem, 5vw, 4rem);
+  align-items: center;
+  margin-top: clamp(2.5rem, 6vw, 4rem);
+}
+.persoon-blok:nth-child(even) img {
+  order: 2;
+}
+.persoon-blok img {
+  width: 100%;
+  max-height: 560px;
+  object-fit: cover;
+  object-position: 50% 70%;
+  border-radius: 16px;
+  border: 2px solid var(--inkt);
+}
+.persoon-blok .tekst p {
+  font-size: 1.125rem;
+  line-height: 1.55;
+}
+.persoon-blok h3 {
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+
+/* ---------- Klein scherm ---------- */
+
+@media (max-width: 720px) {
+  .duo,
+  .sectie,
+  .over,
+  .persoon-blok {
+    grid-template-columns: 1fr;
+  }
+  .persoon-blok:nth-child(even) img {
+    order: 0;
+  }
+  .klein-rij {
+    grid-template-columns: 1fr;
+  }
+  .klein-rij span:last-child {
+    text-align: left;
+  }
+}
+
+/* ---------- Minder beweging als iemand dat instelt ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .w > span {
+    animation: none;
+  }
+  .hero-foto,
+  .lijst > li,
+  .loopband-track {
+    animation: none;
+  }
+  .hero-cta span,
+  #uitgelicht .rij-thumb {
+    transition: none;
+  }
+  .rij-thumb {
+    transition: none;
+  }
+  .rij:hover .rij-thumb,
+  .rij:focus-visible .rij-thumb {
+    transform: none;
+  }
+  #uitgelicht .rij:hover .rij-thumb,
+  #uitgelicht .rij:focus-visible .rij-thumb {
+    transform: none;
+  }
+}

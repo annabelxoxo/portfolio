@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Annabel | Portfolio Experience Design</title>
+  <meta name="description" content="Portfolio van Annabel, student Experience Design in Mechelen. Websites, apps, Unity en 3D, data-visualisatie en meer.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Annabel | Portfolio Experience Design">
+  <meta property="og:description" content="Websites, apps, Unity en 3D, data-visualisatie en meer.">
+  <meta name="theme-color" content="#f2f0ff">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-pagina="home">
+<!-- pssst. typ ergens op deze site het woord snake. -->
+<main id="main">
+  <section class="hero">
+    <div class="hero-layout wrap">
+      <div class="hero-copy">
+        <p class="hero-overline">ANNABEL <span>/</span> EXPERIENCE DESIGN</p>
+        <p class="hero-naam" aria-hidden="true">Annabel</p>
+        <h1 id="kop"></h1>
+        <p class="intro" id="intro"></p>
+        <ul class="rollen" id="rollen"></ul>
+        <a class="hero-cta" href="#werk">Ontdek mijn werk <span aria-hidden="true">↘</span></a>
+      </div>
+      <figure class="hero-portret">
+        <img class="hero-foto" src="assets/annabel-over-mij.jpg" alt="Annabel lachend buiten in de zon">
+        <figcaption>Mechelen · 2026</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="wrap werk-home" id="werk" aria-labelledby="werk-kop">
+    <div class="werk-heading">
+      <div>
+        <p class="werk-overline">WERK / SELECTIE 2025—2026</p>
+        <h2 id="werk-kop">Projecten</h2>
+      </div>
+      <a class="meer" href="projecten.html">Alle projecten <span aria-hidden="true">↗</span></a>
+    </div>
+    <ul class="lijst" id="uitgelicht"></ul>
+  </section>
+
+  <section class="wrap duo">
+    <h2>Over mij</h2>
+    <div>
+      <p id="over-tekst"></p>
+      <a class="meer" href="over-mij.html">Meer over mij</a>
+    </div>
+  </section>
+</main>
+<noscript><p class="wrap">Deze site heeft JavaScript nodig om de projecten te tonen. Zet JavaScript aan of mail me via de knop onderaan.</p></noscript>
+<script src="content.js"></script>
+<script src="js/app.js"></script>
+<script src="js/snake.js"></script>
+</body>
+</html>
