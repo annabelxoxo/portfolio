@@ -240,30 +240,4 @@ window.PROJECTS = [
     ],
     links: [{ label: "Bekijk de visualisatie", url: "" }],
   },
-
-  /* ----- Kleiner werk: geen eigen pagina, staat onderaan de projectenpagina ----- */
-  {
-    klein: true,
-    slug: "kamerplant-club",
-    titel: "KamerPlant Club",
-    lijn: "Een mobiele app in React Native.",
-    categorie: ["Apps"],
-    tools: ["React Native"],
-  },
-  {
-    klein: true,
-    slug: "blender-bal",
-    titel: "Bouncing ball met stof",
-    lijn: "Een Blender-animatie van een stuiterende bal met cloth simulation.",
-    categorie: ["3D en games"],
-    tools: ["Blender"],
-  },
-  {
-    klein: true,
-    slug: "ux-dagboek",
-    titel: "UX-dagboek",
-    lijn: "Vijf echte UX-observaties uit mijn eigen leven, uitgewerkt in een dagboekstudie.",
-    categorie: ["UX en onderzoek"],
-    tools: [],
-  },
 ];
