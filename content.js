@@ -60,7 +60,8 @@ window.SITE = {
           titel: "Praeses van Retabo",
           tekst: [
             "Retabo is een studentenvereniging in Mechelen. Ik ben er Praeses, en ik ben de eerste vrouwelijke Praeses van Retabo die twee jaar verkozen is.",
-            "Als praeses ben ik verantwoordelijk voor de administratie, de financiën, de social media en de organisatie van events: van het Zomerbuffet en TD's tot cantussen en onze eigen merchandise, zoals hoodies, t-shirts, sokken en lintjes. Ik werk samen met een team van andere studenten, en ik stuur ook de algemene Praesidiumvergaderingen aan. Het is een hele verantwoordelijkheid, maar ik vind het geweldig om te doen.",
+            "Als praeses van studentenvereniging Retabo ben ik verantwoordelijk voor de algemene leiding van de vereniging. Ik zorg ervoor dat het bestuur goed samenwerkt en dat iedereen weet wat er van hem of haar verwacht wordt. Daarnaast neem ik de administratie en de financiën op mij: ik houd het budget in de gaten, volg uitgaven en inkomsten op en zorg dat alles correct en transparant verloopt.",
+            "Ik coördineer ook onze evenementen, van het eerste idee tot de uitvoering. Dat betekent plannen, taken verdelen, contact houden met leveranciers en partners, en bijsturen als er iets misloopt. Verder beheer ik onze sociale media, zodat leden en geïnteresseerden altijd op de hoogte zijn van wat er bij Retabo gebeurt. Kortom: ik ben het aanspreekpunt van de vereniging en zorg ervoor dat Retabo vlot draait, zowel achter de schermen als tijdens onze activiteiten.",
           ],
           foto: "assets/over/retabo.jpg",
           fotoAlt: "Annabel, derde van links met het geel-zwarte lint van Retabo, samen met drie andere studenten met hun verenigingslint voor campus De Ham in Mechelen.",
