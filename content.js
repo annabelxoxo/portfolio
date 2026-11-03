@@ -176,6 +176,7 @@ window.PROJECTS = [
     patroon: "cirkels",
     cover: "assets/projecten/ikigai.png",
     coverAlt: "Het logo van IKIGAI: een halve zon op een horizonlijn boven het woord IKIGAI, met Est. 2026 eronder, in gebroken wit op een bordeauxrode achtergrond.",
+    uitgelicht: true,
     opdracht:
       "Iemand die een sportswearmerk in Japanse stijl opricht, vroeg me om een logo. De naam IKIGAI (生き甲斐) betekent: een reden om op te staan.",
     aanpak: [
