@@ -120,6 +120,48 @@ window.SITE = {
 
 window.PROJECTS = [
   {
+    slug: "club-coco",
+    titel: "Club Coco",
+    lijn: "Een website voor Club Coco, een nieuwe zaak in Kapellen met specialty coffee, ontbijt en lunch.",
+    categorie: ["Websites"],
+    jaar: "2026",
+    rol: "", // TODO: wat deed je precies? bv. "Design en development"
+    context: "Voor de nieuwe zaak van een vriendin in Kapellen",
+    tools: [], // TODO: waarmee is de site gebouwd?
+    kleur: "roze",
+    patroon: "bogen",
+    cover: "assets/projecten/club-coco.png",
+    coverAlt: "Startpagina van de Club Coco-site: het lila logo op een achtergrond van koffiebonen, met de kop 'Specialty coffee, ontbijt en lunch' en de knoppen 'Kom langs' en 'Bekijk de kaart'.",
+    opdracht:
+      "Club Coco is een nieuwe zaak in Kapellen, van een vriendin van mij, met specialty coffee, ontbijt en lunch. De website moet tonen wat ze doen en mensen goesting geven om langs te komen.",
+    aanpak: [
+      {
+        titel: "De sfeer van de zaak",
+        tekst:
+          "De site neemt de kleuren en het logo van Club Coco over: lila, bordeaux en een ruitjesband die aan de tegels in de zaak doet denken.",
+      },
+      {
+        titel: "De kaart op de site",
+        tekst:
+          "De volledige kaart staat op de site, met prijzen per categorie en een hartje bij de favorieten van het huis.",
+      },
+      {
+        titel: "Ook op je gsm",
+        tekst:
+          "Op mobiel worden de foto's bij de kaart een rij om door te swipen, zodat de kaart zelf snel in beeld komt.",
+      },
+    ],
+    beelden: [
+      { src: "assets/projecten/club-coco-kaart.png", alt: "De kaart op desktop: drie foto's van ontbijt, koffie en huisgemaakte buns, met daaronder de eerste categorieën en prijzen.", bijschrift: "De kaart" },
+      { src: "assets/projecten/club-coco-fotos.png", alt: "De fotopagina op desktop: een raster met foto's van de toog, het raam met schapenvachten en de kaart van Club Coco.", bijschrift: "Een kijkje binnen" },
+      { src: "assets/projecten/club-coco-mobiel-home.png", alt: "De startpagina op een smartphone, met het logo en de knoppen 'Kom langs' en 'Bekijk de kaart'.", bijschrift: "Startpagina op mobiel" },
+      { src: "assets/projecten/club-coco-mobiel-kaart.png", alt: "De kaart op een smartphone: een rij foto's om door te swipen, met daaronder de koffies en hun prijzen.", bijschrift: "De kaart op mobiel" },
+      { src: "assets/projecten/club-coco-mobiel-fotos.png", alt: "De foto's op een smartphone: een grote foto van de toog met daaronder twee kleinere foto's naast elkaar.", bijschrift: "Foto's op mobiel" },
+    ],
+    links: [{ label: "Bekijk de site", url: "" }], // TODO: link naar de live site
+  },
+
+  {
     slug: "eko-motorwear",
     titel: "EKO Motorwear",
     lijn: "Een redesign van een motorkledingwebshop, met een Webflow-site, een app en een mini-game.",
