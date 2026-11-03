@@ -132,6 +132,7 @@ window.PROJECTS = [
     patroon: "bogen",
     cover: "assets/projecten/club-coco.png",
     coverAlt: "Startpagina van de Club Coco-site: het lila logo op een achtergrond van koffiebonen, met de kop 'Specialty coffee, ontbijt en lunch' en de knoppen 'Kom langs' en 'Bekijk de kaart'.",
+    uitgelicht: true,
     opdracht:
       "Club Coco is een nieuwe zaak in Kapellen, van een vriendin van mij, met specialty coffee, ontbijt en lunch. De website moet tonen wat ze doen en mensen goesting geven om langs te komen.",
     aanpak: [
@@ -158,7 +159,7 @@ window.PROJECTS = [
       { src: "assets/projecten/club-coco-mobiel-kaart.png", alt: "De kaart op een smartphone: een rij foto's om door te swipen, met daaronder de koffies en hun prijzen.", bijschrift: "De kaart op mobiel" },
       { src: "assets/projecten/club-coco-mobiel-fotos.png", alt: "De foto's op een smartphone: een grote foto van de toog met daaronder twee kleinere foto's naast elkaar.", bijschrift: "Foto's op mobiel" },
     ],
-    links: [{ label: "Bekijk de site", url: "https://annabelxoxo.github.io/club-coco-website/" }], // TODO: link naar de live site
+    links: [{ label: "Bekijk de site", url: "https://annabelxoxo.github.io/club-coco-website/" }],
   },
 
   {
