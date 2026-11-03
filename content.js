@@ -171,7 +171,7 @@ window.PROJECTS = [
     jaar: "2026",
     rol: "Logo-ontwerp",
     context: "Voor een ondernemer die een sportswearmerk opricht",
-    tools: [figma], // TODO: waarmee heb je de logo's gemaakt?
+    tools: ["Figma"],
     kleur: "roze",
     patroon: "cirkels",
     cover: "assets/projecten/ikigai.png",
