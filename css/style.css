@@ -965,6 +965,12 @@ h3 {
   gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
 }
+.media-groot {
+  grid-template-columns: 1fr;
+}
+.media-groot figure {
+  margin: 0;
+}
 .media img {
   width: 100%;
   border-radius: 16px;

@@ -287,7 +287,7 @@
       )
       .join("");
     const video = p.video ? `<div class="video"><iframe src="${esc(p.video)}" title="Video over ${esc(p.titel)}" loading="lazy" allowfullscreen></iframe></div>` : "";
-    const media = video || beelden ? `<section class="sectie"><h2>Zo ziet het eruit</h2><div class="media">${video}${beelden}</div></section>` : "";
+    const media = video || beelden ? `<section class="sectie"><h2>Zo ziet het eruit</h2><div class="media${p.beeldenGroot ? " media-groot" : ""}">${video}${beelden}</div></section>` : "";
 
     const volgende = PROJECTEN.length > 1 ? PROJECTEN[(i + 1) % PROJECTEN.length] : null;
 

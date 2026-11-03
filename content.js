@@ -110,6 +110,7 @@ window.SITE = {
      aanpak      lijst van { titel, tekst }: wat heb je gedaan?
      video       embed-link, bv. "https://www.youtube.com/embed/XXXX"
      beelden     lijst van { src, alt, bijschrift }
+     beeldenGroot  true = beelden onder elkaar op volle breedte (voor beelden met details)
      resultaat   wat is er uitgekomen? (tekst)
      leerpunten  lijst van zinnen
      links       lijst van { label, url }, bv. "Bekijk de site" of "Code op GitHub"
@@ -160,6 +161,59 @@ window.PROJECTS = [
       { src: "assets/projecten/club-coco-mobiel-fotos.png", alt: "De foto's op een smartphone: een grote foto van de toog met daaronder twee kleinere foto's naast elkaar.", bijschrift: "Foto's op mobiel" },
     ],
     links: [{ label: "Bekijk de site", url: "https://annabelxoxo.github.io/club-coco-website/" }],
+  },
+
+  {
+    slug: "ikigai",
+    titel: "IKIGAI",
+    lijn: "Logo-iteraties voor IKIGAI, een startend sportswearmerk in Japanse stijl.",
+    categorie: ["Branding"],
+    jaar: "2026",
+    rol: "Logo-ontwerp",
+    context: "Voor een ondernemer die een sportswearmerk opricht",
+    tools: [], // TODO: waarmee heb je de logo's gemaakt?
+    kleur: "roze",
+    patroon: "cirkels",
+    cover: "assets/projecten/ikigai.png",
+    coverAlt: "Het woordmerk IKIGAI in een klassieke schreefletter met het teken 生 in een vierkant, in gebroken wit op een bordeauxrode achtergrond.",
+    opdracht:
+      "Iemand die een sportswearmerk in Japanse stijl opricht, vroeg me om een logo. De naam IKIGAI (生き甲斐) betekent: een reden om op te staan.",
+    aanpak: [
+      {
+        titel: "Het teken als beeldmerk",
+        tekst:
+          "In een aantal versies staat het Japanse teken centraal: 生 in een vierkant, een cirkel of een onderbroken ring, of de volledige naam 生き甲斐 als stempel.",
+      },
+      {
+        titel: "Japans schrift en letterkeuze",
+        tekst:
+          "In andere versies test ik hoe ver het schrift kan gaan: verticaal gezet, 生き甲斐 of イキガイ als hoofdrol, van een fijne schreefletter tot een zware, sportieve letter.",
+      },
+      {
+        titel: "Een eigen symbool",
+        tekst:
+          "Twee versies vertrekken niet vanuit het schrift: een opkomende zon boven een horizon, die aansluit bij de betekenis van de naam, en een losse i die ook als app-icoon werkt.",
+      },
+      {
+        titel: "Een branding sheet per richting",
+        tekst:
+          "Per richting maakte ik een branding sheet met het primaire logo, een negatieve versie, een icoon, de kleuren en de typografie. Elke sheet toont ook een toepassing op kleding, zoals een neklabel, een borstprint of een borduursel op de mouw.",
+      },
+    ],
+    beeldenGroot: true,
+    beelden: [
+      { src: "assets/projecten/ikigai-sheet-01.png", alt: "Branding sheet Serif + hanko: IKIGAI in Cormorant Garamond met 生 in een bordeaux vierkant, een negatieve versie, icoon, kleuren, typografie en neklabel.", bijschrift: "Sheet 01: Serif + hanko" },
+      { src: "assets/projecten/ikigai-sheet-02.png", alt: "Branding sheet Enso: het teken 生 in een open ring boven IKIGAI in Jost Light, een negatieve versie, icoon, kleuren, typografie en neklabel.", bijschrift: "Sheet 02: Enso" },
+      { src: "assets/projecten/ikigai-sheet-03.png", alt: "Branding sheet Verticaal label: IKIGAI letter onder letter in een marineblauw vlak, een negatieve versie met 生き甲斐, icoon, kleuren, typografie en zijlabel.", bijschrift: "Sheet 03: Verticaal label" },
+      { src: "assets/projecten/ikigai-sheet-04.png", alt: "Branding sheet Opkomende zon: een halve zon op een horizonlijn boven IKIGAI, een negatieve versie, icoon, kleuren, typografie en neklabel.", bijschrift: "Sheet 04: Opkomende zon" },
+      { src: "assets/projecten/ikigai-sheet-05.png", alt: "Branding sheet i-monogram: een losse i naast IKIGAI in Jost, een negatieve versie met de slogan Move with purpose, app-icoon, kleuren, typografie en borduursel op de mouw.", bijschrift: "Sheet 05: i-monogram" },
+      { src: "assets/projecten/ikigai-sheet-07.png", alt: "Branding sheet Mincho: 生き甲斐 groot boven IKIGAI in Zen Old Mincho, een negatieve versie, icoon, kleuren, typografie en neklabel.", bijschrift: "Sheet 07: Mincho" },
+      { src: "assets/projecten/ikigai-sheet-08.png", alt: "Branding sheet Penseel: 生 in penseelstijl in een bordeaux cirkel naast IKIGAI in Yuji Syuku, een negatieve versie, icoon, kleuren, typografie en rugprint.", bijschrift: "Sheet 08: Penseel" },
+      { src: "assets/projecten/ikigai-sheet-09.png", alt: "Branding sheet Sport gothic: IKIGAI in de zware Dela Gothic One met イキガイ erbij, een negatieve versie, icoon, kleuren, typografie en een label op de broekspijp.", bijschrift: "Sheet 09: Sport gothic" },
+      { src: "assets/projecten/ikigai-sheet-10.png", alt: "Branding sheet Katakana: イキガイ in vet naast een dunne IKIGAI met Sportswear, een negatieve versie, icoon, kleuren, typografie en neklabel.", bijschrift: "Sheet 10: Katakana" },
+      { src: "assets/projecten/ikigai-sheet-11.png", alt: "Branding sheet Ronde hanko: 生き甲斐 als stempel in een cirkel naast IKIGAI in Zen Antique, een negatieve versie, icoon, kleuren, typografie en borstprint.", bijschrift: "Sheet 11: Ronde hanko" },
+    ],
+    links: [],
   },
 
   {
