@@ -257,6 +257,11 @@ window.PROJECTS = [
           "De app toont dezelfde producten en blogs met herbruikbare componenten (ProductCard en BlogCard), navigatie tussen home, productdetail en blogdetail, en zoeken, filteren en sorteren. In de app zit ook een kleine game met score, timer en herstartknop.",
       },
     ],
+    beelden: [
+      { src: "assets/projecten/eko-app-home.png", alt: "Startscherm van de EKO-app met de slogan 'Rijd verder. Kom veilig thuis.', een oranje knop naar het assortiment en producten in de kijker.", bijschrift: "De app: startscherm" },
+      { src: "assets/projecten/eko-app-blog.png", alt: "Het startscherm verder naar beneden: producten in de kijker en een artikel uit de motorblog over EKO Motorfest Kontich.", bijschrift: "De app: producten en blog" },
+      { src: "assets/projecten/eko-app-shop.png", alt: "De shop in de app met een zoekveld, filters op categorie, sorteerknoppen en een raster met producten.", bijschrift: "De app: zoeken, filteren en sorteren" },
+    ],
     links: [
       { label: "Bekijk de Webflow-site", url: "" },
       { label: "Code op GitHub", url: "" },
@@ -327,6 +332,11 @@ window.PROJECTS = [
         tekst: "Een klein vang-spel zit als extraatje in de app.",
       },
     ],
+    beeldenGroot: true,
+    beelden: [
+      { src: "assets/projecten/busleyden-campus.jpg", alt: "De pagina van campus Zandpoort: een rode menubalk met het logo van Busleyden Atheneum boven een grote foto van het bakstenen schoolgebouw.", bijschrift: "Campuspagina" },
+      { src: "assets/projecten/busleyden-nieuws.jpg", alt: "Een nieuwsartikel met de titel 'BA-collega's leren brandjes blussen' en een foto van collega's die een brandblusoefening doen op de speelplaats.", bijschrift: "Nieuwsartikel" },
+    ],
     links: [{ label: "Code op GitHub", url: "" }],
   },
 
@@ -372,6 +382,14 @@ window.PROJECTS = [
     uitgelicht: true,
     opdracht:
       "Blindenzorg Licht en Liefde wilde een website die ook echt bruikbaar is voor mensen met een visuele beperking. Wij herontwierpen die met toegankelijkheid als vertrekpunt.",
+    beeldenGroot: true,
+    beelden: [
+      { src: "assets/projecten/licht-en-liefde-activiteiten.png", alt: "De pagina Activiteiten: een donkerblauwe banner met het bloemlogo, vier knoppen voor workshops, community events, opleidingen en agenda, en daaronder kaarten met workshops.", bijschrift: "De pagina Activiteiten" },
+      { src: "assets/projecten/licht-en-liefde-contact.png", alt: "De pagina Contact: een donkerblauwe banner met daaronder een overzicht van de Vlaamsoogpunten per regio, met adres, telefoon en e-mail.", bijschrift: "De pagina Contact" },
+      { src: "assets/projecten/licht-en-liefde-footer.png", alt: "De onderkant van de site: knoppen naar sociale media en een donkerblauwe footer met links en drie gele knoppen: Onze locaties, Word vrijwilliger en Doneer.", bijschrift: "Sociale media en footer" },
+      { src: "assets/projecten/licht-en-liefde-kleuren.png", alt: "Pagina uit de brand guide over de brandkleuren: donkerblauw, geel, turquoise, oranje en roze, met de regels voor voldoende contrast volgens de WCAG.", bijschrift: "Brandkleuren uit de brand guide" },
+      { src: "assets/projecten/licht-en-liefde-campagne.jpg", alt: "Campagnebeeld Vier talent: links de tekst 'een vierzintuiglijke wereld vol talent' op donkerblauw, rechts een lachende jongeman met krullen en een bril voor een gele vorm.", bijschrift: "Campagnebeeld 'Vier talent'" },
+    ],
     links: [],
   },
 
