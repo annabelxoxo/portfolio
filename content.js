@@ -166,7 +166,7 @@ window.PROJECTS = [
   {
     slug: "ikigai",
     titel: "IKIGAI",
-    lijn: "Logo-iteraties voor IKIGAI, een startend sportswearmerk in Japanse stijl.",
+    lijn: "Logo en branding voor IKIGAI, een startend sportswearmerk in Japanse stijl.",
     categorie: ["Branding"],
     jaar: "2026",
     rol: "Logo-ontwerp",
@@ -175,7 +175,7 @@ window.PROJECTS = [
     kleur: "roze",
     patroon: "cirkels",
     cover: "assets/projecten/ikigai.png",
-    coverAlt: "Het woordmerk IKIGAI in een klassieke schreefletter met het teken 生 in een vierkant, in gebroken wit op een bordeauxrode achtergrond.",
+    coverAlt: "Het logo van IKIGAI: een halve zon op een horizonlijn boven het woord IKIGAI, met Est. 2026 eronder, in gebroken wit op een bordeauxrode achtergrond.",
     opdracht:
       "Iemand die een sportswearmerk in Japanse stijl opricht, vroeg me om een logo. De naam IKIGAI (生き甲斐) betekent: een reden om op te staan.",
     aanpak: [
@@ -202,10 +202,10 @@ window.PROJECTS = [
     ],
     beeldenGroot: true,
     beelden: [
+      { src: "assets/projecten/ikigai-sheet-04.png", alt: "Branding sheet Opkomende zon: een halve zon op een horizonlijn boven IKIGAI, een negatieve versie, icoon, kleuren, typografie en neklabel.", bijschrift: "Sheet 04: Opkomende zon, de beste richting" },
       { src: "assets/projecten/ikigai-sheet-01.png", alt: "Branding sheet Serif + hanko: IKIGAI in Cormorant Garamond met 生 in een bordeaux vierkant, een negatieve versie, icoon, kleuren, typografie en neklabel.", bijschrift: "Sheet 01: Serif + hanko" },
       { src: "assets/projecten/ikigai-sheet-02.png", alt: "Branding sheet Enso: het teken 生 in een open ring boven IKIGAI in Jost Light, een negatieve versie, icoon, kleuren, typografie en neklabel.", bijschrift: "Sheet 02: Enso" },
       { src: "assets/projecten/ikigai-sheet-03.png", alt: "Branding sheet Verticaal label: IKIGAI letter onder letter in een marineblauw vlak, een negatieve versie met 生き甲斐, icoon, kleuren, typografie en zijlabel.", bijschrift: "Sheet 03: Verticaal label" },
-      { src: "assets/projecten/ikigai-sheet-04.png", alt: "Branding sheet Opkomende zon: een halve zon op een horizonlijn boven IKIGAI, een negatieve versie, icoon, kleuren, typografie en neklabel.", bijschrift: "Sheet 04: Opkomende zon" },
       { src: "assets/projecten/ikigai-sheet-05.png", alt: "Branding sheet i-monogram: een losse i naast IKIGAI in Jost, een negatieve versie met de slogan Move with purpose, app-icoon, kleuren, typografie en borduursel op de mouw.", bijschrift: "Sheet 05: i-monogram" },
       { src: "assets/projecten/ikigai-sheet-07.png", alt: "Branding sheet Mincho: 生き甲斐 groot boven IKIGAI in Zen Old Mincho, een negatieve versie, icoon, kleuren, typografie en neklabel.", bijschrift: "Sheet 07: Mincho" },
       { src: "assets/projecten/ikigai-sheet-08.png", alt: "Branding sheet Penseel: 生 in penseelstijl in een bordeaux cirkel naast IKIGAI in Yuji Syuku, een negatieve versie, icoon, kleuren, typografie en rugprint.", bijschrift: "Sheet 08: Penseel" },
@@ -213,6 +213,8 @@ window.PROJECTS = [
       { src: "assets/projecten/ikigai-sheet-10.png", alt: "Branding sheet Katakana: イキガイ in vet naast een dunne IKIGAI met Sportswear, een negatieve versie, icoon, kleuren, typografie en neklabel.", bijschrift: "Sheet 10: Katakana" },
       { src: "assets/projecten/ikigai-sheet-11.png", alt: "Branding sheet Ronde hanko: 生き甲斐 als stempel in een cirkel naast IKIGAI in Zen Antique, een negatieve versie, icoon, kleuren, typografie en borstprint.", bijschrift: "Sheet 11: Ronde hanko" },
     ],
+    resultaat:
+      "Uit alle richtingen vonden de opdrachtgever en ik sheet 04, de opkomende zon, de beste. De zon verwijst naar de betekenis van de naam: een reden om op te staan.",
     links: [],
   },
 
