@@ -334,6 +334,7 @@ window.PROJECTS = [
     ],
     beeldenGroot: true,
     beelden: [
+      { src: "assets/projecten/busleyden-app.png", alt: "Drie schermen van de Busleyden Atheneum-app: een productenlijst met zoekveld en filters, een overzicht van de campussen, en het nieuws met een foto van leerlingen en collega's op een podium.", bijschrift: "De app: producten, campussen en nieuws" },
       { src: "assets/projecten/busleyden-campus.jpg", alt: "De pagina van campus Zandpoort: een rode menubalk met het logo van Busleyden Atheneum boven een grote foto van het bakstenen schoolgebouw.", bijschrift: "Campuspagina" },
       { src: "assets/projecten/busleyden-nieuws.jpg", alt: "Een nieuwsartikel met de titel 'BA-collega's leren brandjes blussen' en een foto van collega's die een brandblusoefening doen op de speelplaats.", bijschrift: "Nieuwsartikel" },
     ],
