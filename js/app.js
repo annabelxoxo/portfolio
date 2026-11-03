@@ -349,6 +349,46 @@
     $("#contact-links").innerHTML = links.map((l) => `<li><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a></li>`).join("");
   }
 
+  /* ---------- Afbeeldingen vergroten ---------- */
+
+  function vergroten() {
+    const beelden = document.querySelectorAll(".media img, .cover img, .over-foto, .persoon-blok img, .hero-foto");
+    if (!beelden.length) return;
+
+    const doos = document.createElement("dialog");
+    doos.className = "vergroot";
+    doos.setAttribute("aria-label", "Vergrote afbeelding");
+    doos.innerHTML = `<button type="button" class="vergroot-sluit" aria-label="Sluiten">&times;</button><img alt=""><p></p>`;
+    document.body.append(doos);
+    const groot = $("img", doos);
+    const bijschrift = $("p", doos);
+
+    const open = (img) => {
+      const figuur = img.closest("figure");
+      const tekst = figuur && $("figcaption", figuur);
+      groot.src = img.currentSrc || img.src;
+      groot.alt = img.alt;
+      bijschrift.textContent = tekst ? tekst.textContent : "";
+      doos.showModal();
+    };
+
+    beelden.forEach((img) => {
+      img.classList.add("vergrootbaar");
+      img.tabIndex = 0;
+      img.setAttribute("role", "button");
+      img.setAttribute("aria-label", `Vergroot afbeelding: ${img.alt}`);
+      img.addEventListener("click", () => open(img));
+      img.addEventListener("keydown", (e) => {
+        if (e.key !== "Enter" && e.key !== " ") return;
+        e.preventDefault();
+        open(img);
+      });
+    });
+
+    // Overal klikken sluit de vergroting weer; Esc doet de browser zelf
+    doos.addEventListener("click", () => doos.close());
+  }
+
   /* ---------- Starten ---------- */
 
   chrome();
@@ -357,4 +397,5 @@
   else if (PAGINA === "project") detail();
   else if (PAGINA === "over") over();
   else if (PAGINA === "contact") contact();
+  vergroten();
 })();

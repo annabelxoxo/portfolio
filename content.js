@@ -257,10 +257,9 @@ window.PROJECTS = [
           "De app toont dezelfde producten en blogs met herbruikbare componenten (ProductCard en BlogCard), navigatie tussen home, productdetail en blogdetail, en zoeken, filteren en sorteren. In de app zit ook een kleine game met score, timer en herstartknop.",
       },
     ],
+    beeldenGroot: true,
     beelden: [
-      { src: "assets/projecten/eko-app-home.png", alt: "Startscherm van de EKO-app met de slogan 'Rijd verder. Kom veilig thuis.', een oranje knop naar het assortiment en producten in de kijker.", bijschrift: "De app: startscherm" },
-      { src: "assets/projecten/eko-app-blog.png", alt: "Het startscherm verder naar beneden: producten in de kijker en een artikel uit de motorblog over EKO Motorfest Kontich.", bijschrift: "De app: producten en blog" },
-      { src: "assets/projecten/eko-app-shop.png", alt: "De shop in de app met een zoekveld, filters op categorie, sorteerknoppen en een raster met producten.", bijschrift: "De app: zoeken, filteren en sorteren" },
+      { src: "assets/projecten/eko-app.png", alt: "Drie schermen van de EKO-app: het startscherm met de slogan 'Rijd verder. Kom veilig thuis.', producten in de kijker met een artikel uit de motorblog, en de shop met zoekveld, filters en sorteerknoppen.", bijschrift: "De app: startscherm, producten en blog, en de shop" },
     ],
     links: [
       { label: "Bekijk de Webflow-site", url: "" },

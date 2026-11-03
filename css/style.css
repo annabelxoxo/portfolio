@@ -1208,6 +1208,63 @@ h3 {
   }
 }
 
+/* ---------- Afbeeldingen vergroten ---------- */
+
+.vergrootbaar {
+  cursor: zoom-in;
+}
+html:has(.vergroot[open]) {
+  overflow: hidden;
+}
+.vergroot {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  padding: var(--rand);
+  border: 0;
+  background: transparent;
+  cursor: zoom-out;
+}
+.vergroot[open] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+.vergroot::backdrop {
+  background: rgba(28, 18, 64, 0.92);
+}
+.vergroot img {
+  min-height: 0;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+.vergroot p {
+  margin: 0;
+  color: var(--papier);
+  text-align: center;
+}
+.vergroot p:empty {
+  display: none;
+}
+.vergroot-sluit {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 2px solid var(--inkt);
+  border-radius: 50%;
+  background: var(--papier);
+  color: var(--inkt);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
 /* ---------- Minder beweging als iemand dat instelt ---------- */
 
 @media (prefers-reduced-motion: reduce) {
